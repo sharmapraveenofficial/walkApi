@@ -1,7 +1,20 @@
-// var parser = require("xml2js");
+const Test=require('../model/testModel')
 
 exports.getData = (req, res, next) => {
     const selectedArr = ['name', 'age', 'gender']
+   
+    // const testData=await Test.create({
+    //     name:req.body.name,
+    //     age:req.body.age,
+    //     gender:req.body.gender
+    // })
+
+    // res.status(200).json({
+    //     status: 'success',
+    //     data: {
+    //       testData
+    //     }
+    //   });
 
     function getResult(data) {
         const map = data
@@ -13,7 +26,7 @@ exports.getData = (req, res, next) => {
             }
         }
 
-        return res.json(output)
+     return res.json(output)
     }
 
 
